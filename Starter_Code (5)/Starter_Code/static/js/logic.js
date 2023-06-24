@@ -25,28 +25,28 @@ function createFeatures(earthquakeData) {
    // This function determines the color of the marker based on the depth of the earthquake.
     function setColor(depth) {
         if (depth > 90) {
-        return "#ea2c2c";
+        return "#f90a0a";
         }
         if (depth > 70) {
-        return "#ea822c";
+        return "#eb660d";
         }
         if (depth > 50) {
-        return "#ee9c00";
+        return "#eb9f0d";
         }
         if (depth > 30) {
-        return "#eecc00";
+        return "#fbc404";
         }
         if (depth > 10) {
-        return "#d5470d"
+        return "#c1e107"
         } 
-        return "#98ee00";
+        return "#0bf426";
     };
     //Use the function that determines the size of the earthquake marker based on its magnitude.
     function setSize(magnitude) {
         if (magnitude === 0) {
             return 1;
         }
-        return magnitude * 4;
+        return magnitude * 3;
         };
   // Create a GeoJSON layer that contains the features array on the earthquakeData object.
   // Run the onEachFeature function once for each piece of data in the array.
